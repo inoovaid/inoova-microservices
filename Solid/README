@@ -80,6 +80,7 @@ IUserRepository
 Com Injeção de Dependência via ASP.NET Core.
 
 🏗️ Arquitetura do Projeto
+
 OrderFlow
 │
 ├── Controllers
@@ -93,7 +94,9 @@ OrderFlow
 ├── frontend
 │
 └── Program.cs
+
 ⚙️ Tecnologias Utilizadas
+
 Backend
 C#
 ASP.NET Core 8
@@ -108,6 +111,7 @@ Bootstrap
 Banco de Dados
 SQL Server
 EF Core Migrations
+
 📡 Funcionalidades
 
 ✅ Criar usuários
@@ -128,6 +132,7 @@ Listagem dinâmica
 Exclusão de usuários
 Feedback visual
 Cards demonstrando SOLID
+
 🗄️ Banco de Dados
 
 O projeto utiliza:
@@ -138,8 +143,10 @@ Entity Framework Core
 Com migrations para criação automática das tabelas.
 
 🔥 Como Executar
+
 1️⃣ Clonar repositório
 git clone https://github.com/inoovaid/inoova-microservices.git
+
 2️⃣ Backend
 
 Entrar na pasta:
@@ -161,6 +168,7 @@ dotnet run
 Swagger:
 
 https://localhost:7243/swagger
+
 3️⃣ Frontend
 
 Entrar na pasta:
@@ -178,6 +186,7 @@ npm run dev
 Frontend:
 
 http://localhost:5173
+
 📷 Preview
 Backend Swagger
 CRUD completo
@@ -186,6 +195,7 @@ Frontend React
 Interface Full Stack
 Integração com API
 Demonstração visual dos princípios SOLID
+
 📚 Próximos Passos
 
 Este projeto faz parte da minha trilha de estudos em:
