@@ -1,86 +1,25 @@
-# 🚀 OrderFlow — SOLID Architecture Project
+# 🚀 OrderFlow — SOLID Architecture
 
-Projeto Full Stack desenvolvido para demonstrar na prática os princípios SOLID utilizando:
+OrderFlow é uma aplicação Full Stack implementado na InoovaId, desenvolvida com foco em arquitetura de software moderna, aplicando princípios SOLID, separação de responsabilidades e boas práticas de desenvolvimento utilizando o ecossistema .NET e React.
 
-- ASP.NET Core Web API
-- Entity Framework Core
-- SQL Server
-- React
-- Bootstrap
-- Arquitetura em Camadas
-- Injeção de Dependência
-- Repository Pattern
+O projeto foi estruturado para demonstrar na prática conceitos utilizados em aplicações corporativas escaláveis, incluindo arquitetura em camadas, inversão de dependência, abstrações, interfaces segregadas e integração entre frontend, backend e banco de dados relacional.
 
 ---
 
-# 📌 Objetivo
+# 🏗️ Arquitetura da Aplicação
 
-Este projeto foi criado com foco em estudo e demonstração prática de:
+A solução foi desenvolvida seguindo uma arquitetura em camadas, promovendo:
 
-✅ SOLID  
-✅ Clean Code  
-✅ Arquitetura em Camadas  
-✅ Full Stack Development  
-✅ APIs RESTful  
-✅ Integração Frontend + Backend  
-✅ SQL Server com Entity Framework  
+* Baixo acoplamento
+* Alta coesão
+* Facilidade de manutenção
+* Escalabilidade
+* Reutilização de código
+* Testabilidade
 
----
+Estrutura do projeto:
 
-# 🧠 Princípios SOLID Aplicados
-
-## ✅ SRP — Single Responsibility Principle
-
-Cada classe possui apenas uma responsabilidade.
-
-Exemplos:
-
-- `UserRepository`
-- `UserService`
-- `UserController`
-
----
-
-## ✅ OCP — Open Closed Principle
-
-As classes estão abertas para extensão e fechadas para modificação.
-
-Exemplo:
-
-- Herança em `BaseUser`
-- Extensões sem alterar código existente
-
----
-
-## ✅ LSP — Liskov Substitution Principle
-
-Classes filhas podem substituir classes base sem quebrar comportamento.
-
-Exemplo:
-
-```csharp
-AdminUser : BaseUser
-✅ ISP — Interface Segregation Principle
-
-Interfaces específicas e separadas.
-
-Exemplo:
-
-IUserReadRepository
-IUserWriteRepository
-✅ DIP — Dependency Inversion Principle
-
-As dependências utilizam abstrações ao invés de implementações concretas.
-
-Exemplo:
-
-IUserService
-IUserRepository
-
-Com Injeção de Dependência via ASP.NET Core.
-
-🏗️ Arquitetura do Projeto
-
+```bash
 OrderFlow
 │
 ├── Controllers
@@ -94,131 +33,240 @@ OrderFlow
 ├── frontend
 │
 └── Program.cs
+```
 
-⚙️ Tecnologias Utilizadas
+---
 
-Backend
-C#
-ASP.NET Core 8
-Entity Framework Core
-SQL Server
-Swagger
-Frontend
-React
-Vite
-Axios
-Bootstrap
-Banco de Dados
-SQL Server
-EF Core Migrations
+# ⚙️ Stack Tecnológica
 
-📡 Funcionalidades
+## Backend
 
-✅ Criar usuários
-✅ Listar usuários
-✅ Buscar usuário por ID
-✅ Deletar usuários
-✅ Integração React + API
-✅ Persistência em SQL Server
+* ASP.NET Core 8
+* C#
+* Entity Framework Core
+* SQL Server
+* Swagger / OpenAPI
 
-🖥️ Frontend
+## Frontend
 
-O frontend foi desenvolvido em React para consumir a API ASP.NET Core.
+* React
+* Vite
+* Axios
+* Bootstrap
 
-Funcionalidades:
+## Banco de Dados
 
-Cadastro de usuários
-Listagem dinâmica
-Exclusão de usuários
-Feedback visual
-Cards demonstrando SOLID
+* SQL Server
+* EF Core Migrations
 
-🗄️ Banco de Dados
+---
 
-O projeto utiliza:
+# 🧠 Princípios SOLID Aplicados
 
-SQL Server
-Entity Framework Core
+## ✅ SRP — Single Responsibility Principle
 
-Com migrations para criação automática das tabelas.
+Cada componente da aplicação possui responsabilidade única e bem definida.
 
-🔥 Como Executar
+Exemplos:
 
-1️⃣ Clonar repositório
+* `UserController`
+* `UserService`
+* `UserRepository`
+
+---
+
+## ✅ OCP — Open Closed Principle
+
+A aplicação foi estruturada para permitir extensões sem necessidade de alteração do código existente.
+
+Exemplo:
+
+* Extensão de comportamento através de abstrações e herança.
+
+---
+
+## ✅ LSP — Liskov Substitution Principle
+
+Implementação de herança garantindo substituição segura entre abstrações e especializações.
+
+Exemplo:
+
+```csharp
+AdminUser : BaseUser
+```
+
+---
+
+## ✅ ISP — Interface Segregation Principle
+
+Interfaces específicas foram segregadas para evitar contratos excessivos e dependências desnecessárias.
+
+Exemplo:
+
+```csharp
+IUserReadRepository
+IUserWriteRepository
+```
+
+---
+
+## ✅ DIP — Dependency Inversion Principle
+
+As dependências da aplicação utilizam abstrações ao invés de implementações concretas.
+
+Exemplo:
+
+```csharp
+IUserService
+IUserRepository
+```
+
+A injeção de dependência é gerenciada nativamente pelo ASP.NET Core.
+
+---
+
+# 📡 Funcionalidades
+
+* Cadastro de usuários
+* Listagem de usuários
+* Busca por ID
+* Exclusão de registros
+* Integração Frontend + Backend
+* Persistência em SQL Server
+* API RESTful documentada com Swagger
+
+---
+
+# 🖥️ Frontend
+
+O frontend foi desenvolvido em React consumindo a API ASP.NET Core através de requisições HTTP utilizando Axios.
+
+A interface foi construída para demonstrar visualmente os conceitos arquiteturais implementados no backend, incluindo representação dos princípios SOLID.
+
+---
+
+# 🗄️ Persistência de Dados
+
+A camada de persistência utiliza:
+
+* SQL Server
+* Entity Framework Core
+* Migrations
+
+Permitindo versionamento e gerenciamento estruturado do banco de dados.
+
+---
+
+# 🔥 Execução do Projeto
+
+## Clonar repositório
+
+```bash
 git clone https://github.com/inoovaid/inoova-microservices.git
+```
 
-2️⃣ Backend
+---
 
-Entrar na pasta:
+# Backend
 
+Entrar na pasta do projeto:
+
+```bash
 cd Solid/OrderFlow
+```
 
-Instalar dependências:
+Restaurar dependências:
 
+```bash
 dotnet restore
+```
 
 Executar migrations:
 
+```bash
 Update-Database
+```
 
-Rodar API:
+Executar aplicação:
 
+```bash
 dotnet run
+```
 
 Swagger:
 
+```txt
 https://localhost:7243/swagger
+```
 
-3️⃣ Frontend
+---
 
-Entrar na pasta:
+# Frontend
 
+Entrar na pasta frontend:
+
+```bash
 cd frontend
+```
 
 Instalar dependências:
 
+```bash
 npm install
+```
 
-Executar projeto:
+Executar aplicação:
 
+```bash
 npm run dev
+```
 
 Frontend:
 
+```txt
 http://localhost:5173
+```
 
-📷 Preview
-Backend Swagger
-CRUD completo
-API RESTful
-Frontend React
-Interface Full Stack
-Integração com API
-Demonstração visual dos princípios SOLID
+---
 
-📚 Próximos Passos
+# 📷 Visão Geral
 
-Este projeto faz parte da minha trilha de estudos em:
+A solução contempla:
 
-DDD
-Clean Architecture
-Microsserviços
-RabbitMQ
-Kafka
-API Gateway
-Event Storming
-Docker
-Kubernetes
-Observabilidade
-Mensageria
-Arquitetura Distribuída
+* Backend RESTful
+* Frontend React
+* Integração Full Stack
+* Arquitetura em camadas
+* Aplicação prática de SOLID
+* Persistência relacional
+* Organização corporativa de código
 
-👨‍💻 Autor
+---
+
+# 🚀 Roadmap Arquitetural
+
+Este projeto faz parte da evolução arquitetural da plataforma Inoova, incluindo futuras implementações envolvendo:
+
+* Domain Driven Design (DDD)
+* Clean Architecture
+* Microsserviços
+* RabbitMQ
+* Apache Kafka
+* API Gateway
+* Event Storming
+* Docker
+* Kubernetes
+* Observabilidade
+* Mensageria Assíncrona
+* Arquitetura Distribuída
+
+---
+
+# 👨‍💻 Autor
 
 Desenvolvido por:
 
-Inoova ID
+## Inoova ID
 
 GitHub:
-
 https://github.com/inoovaid
